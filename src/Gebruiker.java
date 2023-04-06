@@ -36,4 +36,8 @@ public class Gebruiker
     public void setExtraOptie(ArrayList<ExtraOptie> extraOptie) {
         this.extraOptie = extraOptie;
     }
+
+    public void printOptieLijst(ArrayList<EssentieleOptie>essentieleOpties, ArrayList<ExtraOptie>extraOptie){
+
+    }
 }
