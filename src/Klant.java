@@ -10,7 +10,7 @@ public class Klant extends Gebruiker
 
     public Klant(String naam, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOptie, String adres, String email, int telefoonnummer, Offerte offerte, KlantType klantType) {
         super(naam, essentieleOpties, extraOptie);
-        Adres = adres;
+        this.Adres = adres;
         this.email = email;
         this.telefoonnummer = telefoonnummer;
         this.offerte = offerte;

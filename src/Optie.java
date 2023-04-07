@@ -1,16 +1,16 @@
  class Optie {
-        private String omschrijvingoptie;
+        private String omschrijvingOptie;
 
-        public Optie(String omschrijvingoptie) {
-            this.omschrijvingoptie = omschrijvingoptie;
+        public Optie(String omschrijvingOptie) {
+            this.omschrijvingOptie = omschrijvingOptie;
         }
 
         public String getOmschrijvingOptie() {
-            return omschrijvingoptie;
+            return omschrijvingOptie;
         }
 
-        public void setOmschrijvingOptie(String omschrijvingoptie) {
-            this.omschrijvingoptie = omschrijvingoptie;
+        public void setOmschrijvingOptie(String omschrijvingOptie) {
+            this.omschrijvingOptie = omschrijvingOptie;
         }
     }
 

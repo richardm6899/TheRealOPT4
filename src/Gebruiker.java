@@ -3,14 +3,14 @@ import java.util.ArrayList;
 public class Gebruiker
 {
     private String naam;
-    private ArrayList<EssentieleOptie>essentieleOpties;
-    private ArrayList<ExtraOptie>extraOptie;
+    private ArrayList<EssentieleOptie> essentieleOpties;
+    private ArrayList<ExtraOptie> extraOpties;
 
-    public Gebruiker(String naam, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOptie)
+    public Gebruiker(String naam, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties)
     {
         this.naam = naam;
         this.essentieleOpties = essentieleOpties;
-        this.extraOptie = extraOptie;
+        this.extraOpties = extraOpties;
     }
 
     public String getNaam() {
@@ -30,14 +30,26 @@ public class Gebruiker
     }
 
     public ArrayList<ExtraOptie> getExtraOptie() {
-        return extraOptie;
+        return extraOpties;
     }
 
-    public void setExtraOptie(ArrayList<ExtraOptie> extraOptie) {
-        this.extraOptie = extraOptie;
+    public void setExtraOptie(ArrayList<ExtraOptie> extraOpties) {
+        this.extraOpties = extraOpties;
     }
 
-    public void printOptieLijst(ArrayList<EssentieleOptie>essentieleOpties, ArrayList<ExtraOptie>extraOptie){
+    public void printOptieLijst(EssentieleOptie essentieleOpties, ExtraOptie extraOpties){
+        System.out.println("De volgende essentiele opties zijn: ");
+        for(EssentieleOptie essentieleLijst: essentieleOpties){
+            System.out.println(essentieleLijst);
+        }
+        System.out.println("De volgende extra opties zijn: ");
+        for(ExtraOptie extraLijst: extraOpties){
+            System.out.println(extraLijst);
+        }
 
     }
+    public void printOptieLijst(ArrayList<EssentieleOptie>essentieleOpties, ArrayList<ExtraOptie>Opties){
+
+    }
+
 }

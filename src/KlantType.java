@@ -8,10 +8,12 @@ public class KlantType extends MilieuKorting{
     }
 
     public String getKlanttype() {
+
         return klanttype;
     }
 
     public void setKlanttype(String klanttype) {
+
         this.klanttype = klanttype;
     }
 }

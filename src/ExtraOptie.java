@@ -1,16 +1,28 @@
+import java.util.ArrayList;
+
 public class ExtraOptie extends Optie {
-    private String extraoptie;
+    private String extraOptie;
+    private double kostenExtraOptie;
 
-    public ExtraOptie(String omschrijvingoptie, String extraoptie) {
-        super(omschrijvingoptie);
-        this.extraoptie = extraoptie;
+
+    public ExtraOptie(String omschrijvingOptie, String extraOptie, double kostenExtraOptie) {
+        super(omschrijvingOptie);
+        this.extraOptie = extraOptie;
+        this.kostenExtraOptie = kostenExtraOptie;
+    }
+    public String getExtraOptie() {
+        return extraOptie;
     }
 
-    public String getExtraoptie() {
-        return extraoptie;
+    public void setExtraOptie(String extraOptie) {
+        this.extraOptie = extraOptie;
     }
 
-    public void setExtraoptie(String extraoptie) {
-        this.extraoptie = extraoptie;
+    public double getKostenExtraOptie() {
+        return kostenExtraOptie;
+    }
+
+    public void setKostenExtraOptie(double kostenExtraOptie) {
+        this.kostenExtraOptie = kostenExtraOptie;
     }
 }

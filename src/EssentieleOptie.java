@@ -1,16 +1,27 @@
+import java.util.ArrayList;
 public class EssentieleOptie extends Optie{
-    private String essentieleoptie;
+    private String essentieleOptie;
+    private double kostenEssentieleOptie;
 
-    public EssentieleOptie(String essentieleoptie, String omschrijvingoptie) {
-        super(omschrijvingoptie);
-        this.essentieleoptie = essentieleoptie;
+    public EssentieleOptie(String essentieleOptie, String omschrijvingOptie, double kostenEssentieleOptie) {
+        super(omschrijvingOptie);
+        this.essentieleOptie = essentieleOptie;
+        this.kostenEssentieleOptie = kostenEssentieleOptie;
     }
 
     public String getEssentieleOptie() {
-        return essentieleoptie;
+        return essentieleOptie;
     }
 
-    public void setEssentieleOptie(String essentieleoptie) {
-        this.essentieleoptie = essentieleoptie;
+    public void setEssentieleOptie(String essentieleOptie) {
+        this.essentieleOptie = essentieleOptie;
+    }
+
+    public double getKostenEssentieleOptie() {
+        return kostenEssentieleOptie;
+    }
+
+    public void setKostenEssentieleOptie(double kostenEssentieleOptie) {
+        this.kostenEssentieleOptie = kostenEssentieleOptie;
     }
 }
