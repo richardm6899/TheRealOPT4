@@ -14,10 +14,12 @@ public class Gebruiker
     }
 
     public String getNaam() {
+
         return naam;
     }
 
     public void setNaam(String naam) {
+
         this.naam = naam;
     }
 
@@ -36,8 +38,12 @@ public class Gebruiker
     public void setExtraOptie(ArrayList<ExtraOptie> extraOpties) {
         this.extraOpties = extraOpties;
     }
+    public void addOptieLijst(EssentieleOptie essentieleOptie, ExtraOptie extraOptie){
+        essentieleOpties.add(essentieleOptie);
+        extraOpties.add(extraOptie);
+    }
 
-    public void printOptieLijst(EssentieleOptie essentieleOpties, ExtraOptie extraOpties){
+    public void printOptieLijst(){
         System.out.println("De volgende essentiele opties zijn: ");
         for(EssentieleOptie essentieleLijst: essentieleOpties){
             System.out.println(essentieleLijst);
