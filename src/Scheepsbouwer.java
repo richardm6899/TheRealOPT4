@@ -5,8 +5,8 @@ public class Scheepsbouwer extends Gebruiker{
     private ArrayList<KlantType>klantTypes;
     private String Wachtwoord;
 
-    public Scheepsbouwer(String naam, String Wachtwoord, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOptie, ArrayList<KlantType> klantTypes) {
-        super(naam, essentieleOpties, extraOptie);
+    public Scheepsbouwer(String naam, String Wachtwoord, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, ArrayList<KlantType> klantTypes) {
+        super(naam, essentieleOpties, extraOpties);
         this.klantTypes = klantTypes;
         this.Wachtwoord = Wachtwoord;
     }
@@ -16,21 +16,21 @@ public class Scheepsbouwer extends Gebruiker{
 
     }
     //-----------------------------------------------------------------------------------
-    public void addEssentieleOptie(ArrayList<EssentieleOptie>essentieleOpties){
-
+    public void addEssentieleOptie(EssentieleOptie essentieleOptie){
+        getEssentieleOpties().add(essentieleOptie);
     }
 
-    public void deleteEssentieleOptie(ArrayList<EssentieleOptie>essentieleOpties){
-
+    public void deleteEssentieleOptie(EssentieleOptie essentieleOptie){
+        getEssentieleOpties().remove(essentieleOptie);
     }
     //-------------------------------------------------------------------------------------
 
-    public void addExtraOpties(ArrayList<ExtraOptie>extraOpties){
-
+    public void addExtraOpties(ExtraOptie extraOptie){
+        getExtraOptie().add(extraOptie);
     }
 
-    public void deleteExtraOpties(ArrayList<ExtraOptie>extraOpties){
-
+    public void deleteExtraOpties(ExtraOptie extraOptie){
+        getExtraOptie().remove(extraOptie);
     }
     //--------------------------------------------------------------------------------------
     public void addKlantType(ArrayList<KlantType>klantTypes){

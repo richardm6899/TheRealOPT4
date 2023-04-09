@@ -8,8 +8,8 @@ public class Klant extends Gebruiker
     private Offerte offerte;
     private KlantType klantType;
 
-    public Klant(String naam, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOptie, String adres, String email, int telefoonnummer, Offerte offerte, KlantType klantType) {
-        super(naam, essentieleOpties, extraOptie);
+    public Klant(String naam, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, String adres, String email, int telefoonnummer, Offerte offerte, KlantType klantType) {
+        super(naam, essentieleOpties, extraOpties);
         this.Adres = adres;
         this.email = email;
         this.telefoonnummer = telefoonnummer;
@@ -72,7 +72,11 @@ public class Klant extends Gebruiker
          //         totaal (20% btw):........762,30 euro
 
      }
-     public void selecteerOpties(ArrayList<EssentieleOptie>essentieleOpties, ArrayList<ExtraOptie>extraOptie){
-
+     public void selecteerOpties(Scheepsbouwer scheepsbouwer, EssentieleOptie essentieleOptie, ExtraOptie extraOptie){
+         scheepsbouwer.addEssentieleOptie(essentieleOptie);
+         scheepsbouwer.addExtraOpties(extraOptie);
+         System.out.println("Uw heeft het volgende gekozen: ");
+         System.out.println(essentieleOptie.getEssentieleOptie());
+         System.out.println(extraOptie.getExtraOptie());
      }
 }

@@ -38,24 +38,16 @@ public class Gebruiker
     public void setExtraOptie(ArrayList<ExtraOptie> extraOpties) {
         this.extraOpties = extraOpties;
     }
-    public void addOptieLijst(EssentieleOptie essentieleOptie, ExtraOptie extraOptie){
-        essentieleOpties.add(essentieleOptie);
-        extraOpties.add(extraOptie);
-    }
 
-    public void printOptieLijst(){
+    public void printOptieLijst() {
         System.out.println("De volgende essentiele opties zijn: ");
-        for(EssentieleOptie essentieleLijst: essentieleOpties){
+        for (EssentieleOptie essentieleLijst : essentieleOpties) {
             System.out.println(essentieleLijst);
         }
         System.out.println("De volgende extra opties zijn: ");
-        for(ExtraOptie extraLijst: extraOpties){
+        for (ExtraOptie extraLijst : extraOpties) {
             System.out.println(extraLijst);
         }
-
-    }
-    public void printOptieLijst(ArrayList<EssentieleOptie>essentieleOpties, ArrayList<ExtraOptie>Opties){
-
     }
 
 }
