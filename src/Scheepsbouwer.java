@@ -11,15 +11,15 @@ public class Scheepsbouwer extends Gebruiker{
         this.Wachtwoord = Wachtwoord;
     }
 
-
+    // dit print alle klantTypes uit in deze format (index: klanttype) <Sayf>
     public void printKlantType(){
-
+        klantTypes.forEach( (n)->System.out.printf("%d: %s%n",klantTypes.indexOf(n),n.getKlanttype()) );
     }
     //-----------------------------------------------------------------------------------
     public void addEssentieleOptie(EssentieleOptie essentieleOptie){
         getEssentieleOpties().add(essentieleOptie);
     }
-
+    //van welke object ben je de getEssentieleOpties aan het roepen? <Sayf>
     public void deleteEssentieleOptie(EssentieleOptie essentieleOptie){
         getEssentieleOpties().remove(essentieleOptie);
     }
@@ -28,17 +28,17 @@ public class Scheepsbouwer extends Gebruiker{
     public void addExtraOpties(ExtraOptie extraOptie){
         getExtraOptie().add(extraOptie);
     }
-
+    // van welke object ben je de getExtraOptie aan het roepen? <Sayf>
     public void deleteExtraOpties(ExtraOptie extraOptie){
         getExtraOptie().remove(extraOptie);
     }
     //--------------------------------------------------------------------------------------
-    public void addKlantType(ArrayList<KlantType>klantTypes){
-
+    public void addKlantType(KlantType klantType){
+        klantTypes.add(klantType);
     }
 
-    public void deleteKlantType(ArrayList<KlantType>klantTypes){
-
+    public void deleteKlantType(KlantType klantType){
+        klantTypes.remove(klantType);
     }
 
 
