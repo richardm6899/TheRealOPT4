@@ -43,14 +43,14 @@ public class Gebruiker
         this.extraOpties = extraOpties;
     }
 
-    public void printOptieLijst() {
+    public void printOptieLijst(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties) {
         System.out.println("De volgende essentiele opties zijn: ");
         for (EssentieleOptie essentieleLijst : essentieleOpties) {
-            System.out.println(essentieleLijst);
+            System.out.println(essentieleLijst.getEssentieleOptie());
         }
         System.out.println("De volgende extra opties zijn: ");
         for (ExtraOptie extraLijst : extraOpties) {
-            System.out.println(extraLijst);
+            System.out.println(extraLijst.getExtraOptie());
         }
     }
 

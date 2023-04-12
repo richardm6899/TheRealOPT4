@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class EssentieleOptie extends Optie{
+public class EssentieleOptie extends Optie {
     private String essentieleOptie;
     private double kostenEssentieleOptie;
 
@@ -8,6 +8,12 @@ public class EssentieleOptie extends Optie{
         this.essentieleOptie = essentieleOptie;
         this.kostenEssentieleOptie = kostenEssentieleOptie;
     }
+
+    public EssentieleOptie(String essentieleOptie, String omschrijvingOptie) {
+        super(omschrijvingOptie);
+        this.essentieleOptie = essentieleOptie;
+    }
+
 
     public String getEssentieleOptie() {
         return essentieleOptie;

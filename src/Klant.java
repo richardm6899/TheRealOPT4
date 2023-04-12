@@ -17,13 +17,14 @@ public class Klant extends Gebruiker
         this.klantType = klantType;
     }
     //deze constructor zit hier om het inloggen te testen. <Sayf>
-    public Klant(String naam, String adres, String email, int telefoonnummer, KlantType klantType){
-        super(naam);
+    public Klant(String naam, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, String adres, String email, int telefoonnummer, KlantType klantType){
+        super(naam, essentieleOpties, extraOpties);
         this.email = email;
         this.adres = adres;
         this.telefoonnummer = telefoonnummer;
         this.klantType = klantType;
     }
+
     public String getAdres() {
         return adres;
     }
@@ -79,11 +80,5 @@ public class Klant extends Gebruiker
          //         totaal (20% btw):........762,30 euro
 
      }
-     public void selecteerOpties(Scheepsbouwer scheepsbouwer, EssentieleOptie essentieleOptie, ExtraOptie extraOptie){
-         scheepsbouwer.addEssentieleOptie(essentieleOptie);
-         scheepsbouwer.addExtraOpties(extraOptie);
-         System.out.println("Uw heeft het volgende gekozen: ");
-         System.out.println(essentieleOptie.getEssentieleOptie());
-         System.out.println(extraOptie.getExtraOptie());
-     }
+
 }

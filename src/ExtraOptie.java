@@ -10,6 +10,10 @@ public class ExtraOptie extends Optie {
         this.extraOptie = extraOptie;
         this.kostenExtraOptie = kostenExtraOptie;
     }
+    public ExtraOptie(String extraOptie, String omschrijvingOptie){
+        super(omschrijvingOptie);
+        this.extraOptie = extraOptie;
+    }
     public String getExtraOptie() {
         return extraOptie;
     }
