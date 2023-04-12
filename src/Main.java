@@ -25,6 +25,7 @@ public class Main {
         gegevensInvullen(klantTypes, essentieleOpties, extraOpties, sc);
 
 
+
         //Gebruiker richard = new Klant("Richard", "Motor", "AK47");
         //richard.printOptieLijst("Motor");
     }
@@ -43,8 +44,9 @@ public class Main {
         klantTypes.forEach((n)->System.out.printf("%d: %s%n",klantTypes.indexOf(n)+1,n.getKlanttype()));
         int keuze = sc.nextInt();
         //maakt het klant object aan.
-        Gebruiker klant = new Klant(naam, essentieleOpties, extraOpties, email,adres,telefoonnr,klantTypes.get(keuze-1));
+        Gebruiker klant = new Klant(naam, essentieleOpties, extraOpties, email, adres, telefoonnr, klantTypes.get(keuze-1));
         klant.printOptieLijst(essentieleOpties, extraOpties);
+        selecteerOpties(essentieleOpties, extraOpties, sc);
         //vul hieronder de toon optie lijst methode.
         // toonOptieLijst(parameters);
 
@@ -52,8 +54,12 @@ public class Main {
     public static void selecteerOpties(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc){
         System.out.println("Selecteer jouw optie");
         int keuze = sc.nextInt();
-
-
+        if(keuze < essentieleOpties.size()) {
+            System.out.println(essentieleOpties.get(keuze - 1).getEssentieleOptie());
+        }
+        else{
+            System.out.println(extraOpties.get(keuze - 1 - essentieleOpties.size()).getExtraOptie());
+        }
 
     }
 
