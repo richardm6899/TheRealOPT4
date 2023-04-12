@@ -12,6 +12,10 @@ public class Gebruiker
         this.essentieleOpties = essentieleOpties;
         this.extraOpties = extraOpties;
     }
+    //deze constructor zit hier om het inloggen te testen. <Sayf>
+    public Gebruiker(String naam){
+        this.naam = naam;
+    }
 
     public String getNaam() {
 

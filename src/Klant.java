@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Klant extends Gebruiker
 {
-    private String Adres;
+    private String adres;
     private String email;
     private int telefoonnummer;
     private Offerte offerte;
@@ -10,19 +10,26 @@ public class Klant extends Gebruiker
 
     public Klant(String naam, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, String adres, String email, int telefoonnummer, Offerte offerte, KlantType klantType) {
         super(naam, essentieleOpties, extraOpties);
-        this.Adres = adres;
         this.email = email;
+        this.adres = adres;
         this.telefoonnummer = telefoonnummer;
         this.offerte = offerte;
         this.klantType = klantType;
     }
-
+    //deze constructor zit hier om het inloggen te testen. <Sayf>
+    public Klant(String naam, String adres, String email, int telefoonnummer, KlantType klantType){
+        super(naam);
+        this.email = email;
+        this.adres = adres;
+        this.telefoonnummer = telefoonnummer;
+        this.klantType = klantType;
+    }
     public String getAdres() {
-        return Adres;
+        return adres;
     }
 
     public void setAdres(String adres) {
-        Adres = adres;
+        adres = adres;
     }
 
     public String getEmail() {
