@@ -19,7 +19,7 @@ public class Scheepsbouwer extends Gebruiker{
     public void addEssentieleOptie(EssentieleOptie essentieleOptie){
         getEssentieleOpties().add(essentieleOptie);
     }
-    //van welke object ben je de getEssentieleOpties aan het roepen? <Sayf>
+
     public void deleteEssentieleOptie(EssentieleOptie essentieleOptie){
         getEssentieleOpties().remove(essentieleOptie);
     }
@@ -28,7 +28,7 @@ public class Scheepsbouwer extends Gebruiker{
     public void addExtraOpties(ExtraOptie extraOptie){
         getExtraOptie().add(extraOptie);
     }
-    // van welke object ben je de getExtraOptie aan het roepen? <Sayf>
+
     public void deleteExtraOpties(ExtraOptie extraOptie){
         getExtraOptie().remove(extraOptie);
     }
