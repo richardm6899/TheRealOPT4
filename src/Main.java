@@ -52,6 +52,7 @@ public class Main {
 
     }
     public static void selecteerOpties(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc){
+
         System.out.println("Selecteer jouw optie");
         int keuze = sc.nextInt();
         if(keuze < essentieleOpties.size()) {
@@ -60,7 +61,17 @@ public class Main {
         else{
             System.out.println(extraOpties.get(keuze - 1 - essentieleOpties.size()).getExtraOptie());
         }
+        System.out.println("Heb je alles selecteerd?");
+        System.out.println("1: ja");
+        System.out.println("2: nee");
 
+        int keuze2 = sc.nextInt();
+        if(keuze2 == 1){
+            System.out.println("Keuze voltooid");
+        }
+        else if ( keuze2 == 2) {
+            selecteerOpties(essentieleOpties, extraOpties, sc);
+        }
     }
 
     public static void beginPage(){
