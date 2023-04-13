@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class KlantType extends MilieuKorting{
     private String klanttype;
 
@@ -15,5 +18,12 @@ public class KlantType extends MilieuKorting{
     public void setKlanttype(String klanttype) {
 
         this.klanttype = klanttype;
+    }
+
+    public static void lijstKlantType(ArrayList<KlantType> klantTypes, Scanner sc) {
+        for (KlantType klanttype : klantTypes) {
+            System.out.println("-" + klanttype.getKlanttype());
+        }
+
     }
 }
