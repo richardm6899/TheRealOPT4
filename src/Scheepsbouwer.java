@@ -11,6 +11,10 @@ public class Scheepsbouwer extends Gebruiker{
         this.Wachtwoord = Wachtwoord;
     }
 
+    public String getWachtwoord(){
+        return Wachtwoord;
+    }
+
     // dit print alle klantTypes uit in deze format (index: klanttype) <Sayf>
     public void printKlantType(){
         klantTypes.forEach( (n)->System.out.printf("%d: %s%n",klantTypes.indexOf(n),n.getKlanttype()) );

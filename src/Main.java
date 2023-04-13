@@ -3,9 +3,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+
+
         Scanner sc = new Scanner(System.in);
         //ik heb de ascii art verplaatst.
-        beginPage();
+        logoPage();
 
         ArrayList<KlantType> klantTypes = new ArrayList<KlantType>();
         klantTypes.add(new KlantType("Bedrijf", 90));
@@ -22,9 +25,9 @@ public class Main {
         extraOpties.add(new ExtraOptie("sea-wiz", "Anti air defense systeem"));
         extraOpties.add(new ExtraOptie("TurretKogels", "Kogels om te kunnen schieten"));
         extraOpties.add(new ExtraOptie("Torpedos", "Schippen te kunnen schieten"));
-        gegevensInvullen(klantTypes, essentieleOpties, extraOpties, sc);
 
 
+        welkomScreen(klantTypes, essentieleOpties,extraOpties, sc);
 
         //Gebruiker richard = new Klant("Richard", "Motor", "AK47");
         //richard.printOptieLijst("Motor");
@@ -74,7 +77,7 @@ public class Main {
         }
     }
 
-    public static void beginPage(){
+    public static void logoPage(){
         System.out.println(" ________  ________  ___  ___  _______   _______   ________  ________           ________  ________  ___  ___  ___       __   _______   ________     \n" +
                 "|\\   ____\\|\\   ____\\|\\  \\|\\  \\|\\  ___ \\ |\\  ___ \\ |\\   __  \\|\\   ____\\         |\\   __  \\|\\   __  \\|\\  \\|\\  \\|\\  \\     |\\  \\|\\  ___ \\ |\\   __  \\    \n" +
                 "\\ \\  \\___|\\ \\  \\___|\\ \\  \\\\\\  \\ \\   __/|\\ \\   __/|\\ \\  \\|\\  \\ \\  \\___|_        \\ \\  \\|\\ /\\ \\  \\|\\  \\ \\  \\\\\\  \\ \\  \\    \\ \\  \\ \\   __/|\\ \\  \\|\\  \\   \n" +
@@ -85,5 +88,45 @@ public class Main {
                 "   \\|_________|                                                \\|_________|                                                                         \n" +
                 "                                                                                                                                                    \n" +
                 "                                                                                                                                                    ");
+    }
+//basis van de welkom en login.
+    public static void welkomScreen(ArrayList<KlantType> klantTypes,ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties,Scanner sc){
+        System.out.println("Welkom!, Welke rol heeft u.");
+        System.out.println("Rollen: ");
+        System.out.println("Toets 1 voor scheeps bouwer.");
+        System.out.println("Toets 2 voor klant");
+        System.out.println("----------------------------------------------------------");
+        System.out.println();
+
+
+        int input = sc.nextInt();
+        sc.nextLine();
+
+        if(input == 1){
+            loginScreen(klantTypes, essentieleOpties,extraOpties, sc);
+
+        } else if (input == 2) {
+            gegevensInvullen(klantTypes, essentieleOpties,extraOpties, sc);
+
+        }else{
+            welkomScreen(klantTypes, essentieleOpties,extraOpties, sc);
+        }
+
+    }
+//basis van de welkom en log in (gaat nog veranderen).
+    public static void loginScreen(ArrayList<KlantType> klantTypes,ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties,Scanner sc){
+        System.out.println("Welkom scheepsbouwer ! Log a.u.b hier in.");
+
+
+        String input = sc.nextLine();
+        if(input.equals("testing123")){
+            System.out.print("test werkt");
+
+        }else{
+            System.out.println("Wachtwoord is onjuist!");
+            loginScreen(klantTypes, essentieleOpties,extraOpties, sc);
+
+        }
+
     }
 }
