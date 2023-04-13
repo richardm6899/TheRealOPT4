@@ -18,10 +18,10 @@ public class Welkom {
 
     //welkom screen je krijgt de keuze tussen klant en scheepsbouwer om toegang tot de applicatie te krijgen.
     public static void welkomScreen(ArrayList<KlantType> klantTypes, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc, Scheepsbouwer richard) {
-        System.out.println("Welkom!, Welke rol heeft u.");
+        System.out.println("Welkom!, Welke rol heeft u?");
         System.out.println("Rollen: ");
         System.out.println("Toets 1 voor scheeps bouwer.");
-        System.out.println("Toets 2 voor klant");
+        System.out.println("Toets 2 voor klant.");
         System.out.println("----------------------------------------------------------");
         System.out.println();
 

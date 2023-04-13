@@ -45,11 +45,15 @@ public abstract class Gebruiker
     }
 
     public void printOptieLijst(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties) {
+        System.out.println("----------------------------------------------------------");
         System.out.println("De volgende essentiele opties zijn: ");
+        System.out.println("----------------------------------------------------------");
         for (EssentieleOptie essentieleLijst : essentieleOpties) {
             System.out.println(essentieleLijst.getEssentieleOptie());
         }
+        System.out.println("----------------------------------------------------------");
         System.out.println("De volgende extra opties zijn: ");
+        System.out.println("----------------------------------------------------------");
         for (ExtraOptie extraLijst : extraOpties) {
             System.out.println(extraLijst.getExtraOptie());
         }
