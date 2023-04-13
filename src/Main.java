@@ -18,13 +18,13 @@ public class Main {
         ArrayList<EssentieleOptie> essentieleOpties = new ArrayList<>();
         ArrayList<ExtraOptie> extraOpties = new ArrayList<>();
 
-        essentieleOpties.add(new EssentieleOptie("Motor", "Draait boot", 1999.99));
-        essentieleOpties.add(new EssentieleOptie("energievoorzieningen", "Licht geven", 20));
-        essentieleOpties.add(new EssentieleOptie( "Scheepsromp", "Geeft structuur aan het schip", 20)) ;
-        essentieleOpties.add(new EssentieleOptie("Diesel", "Geeft energie", 20));
-        extraOpties.add(new ExtraOptie("sea-wiz", "Anti air defense systeem", 20));
-        extraOpties.add(new ExtraOptie("TurretKogels", "Kogels om te kunnen schieten", 20));
-        extraOpties.add(new ExtraOptie("Torpedos", "Schippen te kunnen schieten",20));
+        essentieleOpties.add(new EssentieleOptie("1: Motor", "Draait boot", 1999.99));
+        essentieleOpties.add(new EssentieleOptie("2: energievoorzieningen", "Licht geven", 1000));
+        essentieleOpties.add(new EssentieleOptie( "3: Scheepsromp", "Geeft structuur aan het schip", 5000)) ;
+        essentieleOpties.add(new EssentieleOptie("4: Diesel", "Geeft energie", 20000));
+        extraOpties.add(new ExtraOptie("5: sea-wiz", "Anti air defense systeem", 20));
+        extraOpties.add(new ExtraOptie("6: TurretKogels", "Kogels om te kunnen schieten", 20));
+        extraOpties.add(new ExtraOptie("7: Torpedos", "Schippen te kunnen schieten",20));
 
 
         welkomScreen(klantTypes, essentieleOpties,extraOpties, sc);
