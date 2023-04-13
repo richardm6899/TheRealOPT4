@@ -47,22 +47,23 @@ public class Main {
         klantTypes.forEach((n) -> System.out.printf("%d: %s%n", klantTypes.indexOf(n) + 1, n.getKlanttype()));
         int keuze = sc.nextInt();
         //maakt het klant object aan.
-        Gebruiker klant = new Klant(naam, essentieleOpties, extraOpties, email, adres, telefoonnr, klantTypes.get(keuze - 1));
+        Klant klant = new Klant(naam, essentieleOpties, extraOpties, email, adres, telefoonnr, klantTypes.get(keuze-1));
+        Offerte offerte = new Offerte(klant.getKlantType());
         klant.printOptieLijst(essentieleOpties, extraOpties);
-        selecteerOpties(essentieleOpties, extraOpties, sc);
-        //vul hieronder de toon optie lijst methode.
-        // toonOptieLijst(parameters);
+        selecteerOpties(offerte,essentieleOpties, extraOpties, sc);
 
     }
-
-    public static void selecteerOpties(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc) {
+    public static void selecteerOpties(Offerte offerte, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc){
 
         System.out.println("Selecteer jouw optie");
         int keuze = sc.nextInt();
-        if (keuze < essentieleOpties.size()) {
+        if(keuze < essentieleOpties.size()) {
             System.out.println("-" + essentieleOpties.get(keuze - 1).getEssentieleOptie() + ": " + essentieleOpties.get(keuze - 1).getOmschrijvingOptie() + " (€" + essentieleOpties.get(keuze - 1).getKostenEssentieleOptie() + ")");
-        } else {
+            offerte.addGekozenEssentieleOpties(essentieleOpties.get(keuze - 1));
+        }
+        else{
             System.out.println(extraOpties.get(keuze - 1 - essentieleOpties.size()).getExtraOptie());
+            offerte.addGekozenExtraOpties( extraOpties.get(keuze - 1 - essentieleOpties.size()) );
         }
         System.out.println("Heb je alles selecteerd?");
         System.out.println("1: ja");
@@ -70,10 +71,14 @@ public class Main {
 
 
         int keuze2 = sc.nextInt();
-        if (keuze2 == 1) {
+        if(keuze2 == 1){
             System.out.println("Keuze voltooid");
-        } else if (keuze2 == 2) {
-            selecteerOpties(essentieleOpties, extraOpties, sc);
+            offerte.printGekozenOpties();
+            offerte.berekenTotaalPrijs();
+            //logoPage(sc);
+        }
+        else if ( keuze2 == 2) {
+            selecteerOpties(offerte, essentieleOpties, extraOpties, sc);
         }
     }
 
