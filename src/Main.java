@@ -29,8 +29,6 @@ public class Main {
 
         welkomScreen(klantTypes, essentieleOpties,extraOpties, sc);
 
-        //Gebruiker richard = new Klant("Richard", "Motor", "AK47");
-        //richard.printOptieLijst("Motor");
     }
     public static void gegevensInvullen(ArrayList<KlantType> klantTypes, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc){
         //vraagt gegevens en slaat deze op.
@@ -115,11 +113,12 @@ public class Main {
     }
 //basis van de welkom en log in (gaat nog veranderen).
     public static void loginScreen(ArrayList<KlantType> klantTypes,ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties,Scanner sc){
+        Scheepsbouwer richard = new Scheepsbouwer("Richard", "admin", klantTypes);
         System.out.println("Welkom scheepsbouwer ! Log a.u.b hier in.");
 
 
         String input = sc.nextLine();
-        if(input.equals("testing123")){
+        if(input.equals(richard.getWachtwoord())){
             System.out.print("test werkt");
 
         }else{

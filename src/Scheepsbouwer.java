@@ -5,8 +5,8 @@ public class Scheepsbouwer extends Gebruiker{
     private ArrayList<KlantType>klantTypes;
     private String Wachtwoord;
 
-    public Scheepsbouwer(String naam, String Wachtwoord, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, ArrayList<KlantType> klantTypes) {
-        super(naam, essentieleOpties, extraOpties);
+    public Scheepsbouwer(String naam, String Wachtwoord, ArrayList<KlantType> klantTypes) {
+        super(naam);
         this.klantTypes = klantTypes;
         this.Wachtwoord = Wachtwoord;
     }

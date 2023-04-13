@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Gebruiker
+public abstract class Gebruiker
 {
     private String naam;
     private ArrayList<EssentieleOptie> essentieleOpties;
