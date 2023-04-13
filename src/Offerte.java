@@ -3,26 +3,45 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Offerte {
-    private String klanttype;
-    private ArrayList<String> gekozenOpties;
+    private KlantType klanttype;
+    private double totaalPrijs;
+    private ArrayList<EssentieleOptie> gekozenEssentieleOpties = new ArrayList<>();
+    private ArrayList<ExtraOptie> gekozenExtraOpties = new ArrayList<>();
 
-    public Offerte(String klanttype, ArrayList<String> gekozenOpties) {
-        this.gekozenOpties = gekozenOpties;
+    public Offerte(KlantType klanttype) {
         this.klanttype = klanttype;
     }
-
-    public int berekenTotaalPrijs(boolean extraOptie, boolean isKlant) {
-        int totaalPrijs = basisPrijs;
-        if (extraOptie) {
-            totaalPrijs += extraOptiePrijs;
+    //berekent totaal prijs.
+    public void berekenTotaalPrijs() {
+        for (EssentieleOptie esOptie:gekozenEssentieleOpties) {
+            totaalPrijs += esOptie.getKostenEssentieleOptie();
         }
-        if (isKlant) {
-            totaalPrijs -= klantKorting;
+        for (ExtraOptie exOptie:gekozenExtraOpties) {
+            totaalPrijs += exOptie.getKostenExtraOptie();
         }
-        return totaalPrijs;
+        System.out.printf("         subtotaal:...............%.2f euro%n",totaalPrijs);
+        double korting = totaalPrijs* (klanttype.getKortingsPercentage()/100);
+        System.out.printf("         Klantkorting:............%.2f euro (%.1f",korting,klanttype.getKortingsPercentage());
+        System.out.println("%)");
+        System.out.println("         ______________________________________");
+        totaalPrijs*= 1-(klanttype.getKortingsPercentage()/100);
+        totaalPrijs*= 1.21;
+        System.out.print("         totaal (20% btw):........");
+        System.out.printf("%.2f euro%n",totaalPrijs);
     }
 
-    int basisPrijs = 500;
-    int extraOptiePrijs = 200;
-    int klantKorting = 300;
+    public void addGekozenEssentieleOpties(EssentieleOptie gekozenEssentieleOptie) {
+        gekozenEssentieleOpties.add(gekozenEssentieleOptie);
+    }
+    public void printGekozenOpties(){
+        System.out.println("         Essentiele Opties:");
+        gekozenEssentieleOpties.forEach( (n)->System.out.printf("         - %s...................%.2f euro%n",n.getEssentieleOptie(),n.getKostenEssentieleOptie()) );
+        System.out.println("         Extra Opties:");
+        gekozenExtraOpties.forEach( (n)->System.out.printf("         - %s.............%.2f euro%n",n.getExtraOptie(),n.getKostenExtraOptie()) );
+    }
+
+
+    public void addGekozenExtraOpties(ExtraOptie gekozenExtraOptie) {
+        gekozenExtraOpties.add(gekozenExtraOptie);
+    }
 }
