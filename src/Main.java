@@ -18,13 +18,13 @@ public class Main {
         ArrayList<EssentieleOptie> essentieleOpties = new ArrayList<>();
         ArrayList<ExtraOptie> extraOpties = new ArrayList<>();
 
-        essentieleOpties.add(new EssentieleOptie("Motor", "Draait boot"));
-        essentieleOpties.add(new EssentieleOptie("energievoorzieningen", "Licht geven"));
-        essentieleOpties.add(new EssentieleOptie( "Scheepsromp", "Geeft structuur aan het schip")) ;
-        essentieleOpties.add(new EssentieleOptie("Diesel", "Geeft energie"));
-        extraOpties.add(new ExtraOptie("sea-wiz", "Anti air defense systeem"));
-        extraOpties.add(new ExtraOptie("TurretKogels", "Kogels om te kunnen schieten"));
-        extraOpties.add(new ExtraOptie("Torpedos", "Schippen te kunnen schieten"));
+        essentieleOpties.add(new EssentieleOptie("Motor", "Draait boot", 1999.99));
+        essentieleOpties.add(new EssentieleOptie("energievoorzieningen", "Licht geven", 20));
+        essentieleOpties.add(new EssentieleOptie( "Scheepsromp", "Geeft structuur aan het schip", 20)) ;
+        essentieleOpties.add(new EssentieleOptie("Diesel", "Geeft energie", 20));
+        extraOpties.add(new ExtraOptie("sea-wiz", "Anti air defense systeem", 20));
+        extraOpties.add(new ExtraOptie("TurretKogels", "Kogels om te kunnen schieten", 20));
+        extraOpties.add(new ExtraOptie("Torpedos", "Schippen te kunnen schieten",20));
 
 
         welkomScreen(klantTypes, essentieleOpties,extraOpties, sc);
@@ -59,7 +59,7 @@ public class Main {
         System.out.println("Selecteer jouw optie");
         int keuze = sc.nextInt();
         if(keuze < essentieleOpties.size()) {
-            System.out.println(essentieleOpties.get(keuze - 1).getEssentieleOptie());
+            System.out.println("-" + essentieleOpties.get(keuze - 1).getEssentieleOptie() + ": " + essentieleOpties.get(keuze - 1).getOmschrijvingOptie() + " (€" + essentieleOpties.get(keuze - 1).getKostenEssentieleOptie() + ")");
         }
         else{
             System.out.println(extraOpties.get(keuze - 1 - essentieleOpties.size()).getExtraOptie());
