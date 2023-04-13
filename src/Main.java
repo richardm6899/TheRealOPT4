@@ -221,6 +221,7 @@ public class Main {
             scheepsBouwer(klantType, essentieleOpties, extraOpties, sc, richard);
 
         }
+
         if (choice == 2){
             System.out.println("welke extra optie wilt u toevoegen?");
             System.out.println("naam extra optie: ");
