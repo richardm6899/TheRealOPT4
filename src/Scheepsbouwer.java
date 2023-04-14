@@ -47,7 +47,7 @@ public class Scheepsbouwer extends Gebruiker{
     }
 
     //Geeft een keuze menu weer waarin je kan kiezen welke lijst je wilt bekijken.
-    public static void scheepsBouwer(ArrayList<KlantType> klantTypes, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc, Scheepsbouwer richard){
+    public static void scheepsBouwer(ArrayList<KlantType> klantTypes, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc, Scheepsbouwer richard) {
         System.out.println("Welke Lijst wilt u weergeven?");
         System.out.println("1: KlantType lijst");
         System.out.println("2: Optie lijst (essentiel en extra)");
@@ -57,27 +57,31 @@ public class Scheepsbouwer extends Gebruiker{
 
         if (choice == 1) {
             KlantType.lijstKlantType(klantTypes, sc);
+            System.out.println("----------------------------------------------------------");
         }
         if (choice == 2) {
             lijstOpties(essentieleOpties, extraOpties, sc);
             choice = sc.nextInt();
             sc.nextLine();
-            if (choice == 1){
+            if (choice == 1) {
                 Optie.optieToevoegen(essentieleOpties, extraOpties, sc, richard, klantTypes);
             }
-            if (choice == 2){
-
+            if (choice == 2) {
+                Optie.optieVerwijderen(essentieleOpties, extraOpties, sc, richard, klantTypes);
             }
-            if (choice == 0){
+            if (choice == 0) {
                 scheepsBouwer(klantTypes, essentieleOpties, extraOpties, sc, richard);
             }
         }
         if (choice == 0) {
             Welkom.welkomScreen(klantTypes, essentieleOpties, extraOpties, sc, richard);
         }
-        if (choice != 1 || choice != 2|| choice != 3){
-            System.out.println("onjuiste keuze");
+        if (choice != 1 || choice != 2 || choice != 3) {
+            //System.out.println("onjuiste keuze");
             scheepsBouwer(klantTypes, essentieleOpties, extraOpties, sc, richard);
+        }
+        if (choice != 1 && choice != 2 && choice != 3) {
+            System.out.println("onjuiste keuze");
         }
     }
 

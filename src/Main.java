@@ -18,13 +18,14 @@ public class Main {
 
         ArrayList<EssentieleOptie> essentieleOpties = new ArrayList<>();
         ArrayList<ExtraOptie> extraOpties = new ArrayList<>();
+
         essentieleOpties.add(new EssentieleOptie("Motor", "Draait boot", 1999.99));
         essentieleOpties.add(new EssentieleOptie("energievoorzieningen", "Licht geven", 20));
         essentieleOpties.add(new EssentieleOptie("Scheepsromp", "Geeft structuur aan het schip", 20));
-        essentieleOpties.add(new EssentieleOptie("Diesel", "Geeft energie", 20));
-        extraOpties.add(new ExtraOptie("sea-wiz", "Anti air defense system", 20));
+        essentieleOpties.add(new EssentieleOptie( "Diesel", "Geeft energie", 20));
+        extraOpties.add(new ExtraOptie("sea-wiz", "Anti air defense systeem", 20));
         extraOpties.add(new ExtraOptie("TurretKogels", "Kogels om te kunnen schieten", 20));
-        extraOpties.add(new ExtraOptie("Torpedos", "Onderwater Raketten", 20));
+        extraOpties.add(new ExtraOptie("Torpedos", "Schippen te kunnen schieten", 20));
 
 
         Welkom.welkomScreen(klantTypes, essentieleOpties, extraOpties, sc, richard);

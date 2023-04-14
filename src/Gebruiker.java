@@ -44,18 +44,21 @@ public abstract class Gebruiker
         this.extraOpties = extraOpties;
     }
 
-    public void printOptieLijst(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties) {
+    public static void printOptieLijst(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties) {
         System.out.println("----------------------------------------------------------");
         System.out.println("De volgende essentiele opties zijn: ");
         System.out.println("----------------------------------------------------------");
+        int index = 1;
         for (EssentieleOptie essentieleOptie : essentieleOpties) {
-            System.out.println("- " + essentieleOptie.getEssentieleOptie() + ": " + essentieleOptie.getOmschrijvingOptie() + " (€" + essentieleOptie.getKostenEssentieleOptie() + ")");
+            System.out.println(index + ". " + essentieleOptie.getEssentieleOptie() + ": " + essentieleOptie.getOmschrijvingOptie() + " (€" + essentieleOptie.getKostenEssentieleOptie() + ")");
+            index++;
         }
         System.out.println("----------------------------------------------------------");
         System.out.println("De volgende extra opties zijn: ");
         System.out.println("----------------------------------------------------------");
         for (ExtraOptie extraOptie : extraOpties) {
-            System.out.println("- " + extraOptie.getExtraOptie() + ": " + extraOptie.getOmschrijvingOptie() + " (€" + extraOptie.getKostenExtraOptie() + ")");
+            System.out.println(index + ". " + extraOptie.getExtraOptie() + ": " + extraOptie.getOmschrijvingOptie() + " (€" + extraOptie.getKostenExtraOptie() + ")");
+            index++;
         }
     }
 
@@ -85,7 +88,7 @@ public abstract class Gebruiker
 
         System.out.println("Selecteer jouw optie");
         int keuze = sc.nextInt();
-        if(keuze < essentieleOpties.size()) {
+        if(keuze <= essentieleOpties.size()) {
             System.out.println("-" + essentieleOpties.get(keuze - 1).getEssentieleOptie() + ": " + essentieleOpties.get(keuze - 1).getOmschrijvingOptie() + " (€" + essentieleOpties.get(keuze - 1).getKostenEssentieleOptie() + ")");
             offerte.addGekozenEssentieleOpties(essentieleOpties.get(keuze - 1));
         }
@@ -106,6 +109,7 @@ public abstract class Gebruiker
             //logoPage(sc);
         }
         else if ( keuze2 == 2) {
+            Gebruiker.printOptieLijst(essentieleOpties, extraOpties);
             selecteerOpties(offerte, essentieleOpties, extraOpties, sc);
         }
     }
