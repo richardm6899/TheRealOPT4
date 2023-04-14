@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class KlantType extends MilieuKorting{
     private String klanttype;
 
@@ -27,3 +24,4 @@ public class KlantType extends MilieuKorting{
 
     }
 }
+

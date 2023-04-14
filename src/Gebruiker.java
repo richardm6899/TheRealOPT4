@@ -48,14 +48,14 @@ public abstract class Gebruiker
         System.out.println("----------------------------------------------------------");
         System.out.println("De volgende essentiele opties zijn: ");
         System.out.println("----------------------------------------------------------");
-        for (EssentieleOptie essentieleLijst : essentieleOpties) {
-            System.out.println(essentieleLijst.getEssentieleOptie());
+        for (EssentieleOptie essentieleOptie : essentieleOpties) {
+            System.out.println("- " + essentieleOptie.getEssentieleOptie() + ": " + essentieleOptie.getOmschrijvingOptie() + " (€" + essentieleOptie.getKostenEssentieleOptie() + ")");
         }
         System.out.println("----------------------------------------------------------");
         System.out.println("De volgende extra opties zijn: ");
         System.out.println("----------------------------------------------------------");
-        for (ExtraOptie extraLijst : extraOpties) {
-            System.out.println(extraLijst.getExtraOptie());
+        for (ExtraOptie extraOptie : extraOpties) {
+            System.out.println("- " + extraOptie.getExtraOptie() + ": " + extraOptie.getOmschrijvingOptie() + " (€" + extraOptie.getKostenExtraOptie() + ")");
         }
     }
 
