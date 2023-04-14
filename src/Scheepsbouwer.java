@@ -59,7 +59,7 @@ public class Scheepsbouwer extends Gebruiker{
             KlantType.lijstKlantType(klantTypes, sc);
         }
         if (choice == 2) {
-            Optie.lijstOpties(essentieleOpties, extraOpties, sc);
+            lijstOpties(essentieleOpties, extraOpties, sc);
             choice = sc.nextInt();
             sc.nextLine();
             if (choice == 1){
