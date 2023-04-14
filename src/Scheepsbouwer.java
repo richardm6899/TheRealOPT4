@@ -81,4 +81,23 @@ public class Scheepsbouwer extends Gebruiker{
         }
     }
 
+    public static void lijstOpties(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc) {
+        System.out.println("Optie lijst:");
+        System.out.println("essentiele opties:");
+        for (EssentieleOptie essentieleOptie : essentieleOpties) {
+            System.out.println("- " + essentieleOptie.getEssentieleOptie() + ": " + essentieleOptie.getOmschrijvingOptie() + " (€" + essentieleOptie.getKostenEssentieleOptie() + ")");
+        }
+        System.out.println("extra opties:");
+
+        for (ExtraOptie extraOptie : extraOpties) {
+            System.out.println("- " + extraOptie.getExtraOptie() + ": " + extraOptie.getOmschrijvingOptie() + " (€" + extraOptie.getKostenExtraOptie() + ")");
+        }
+        System.out.println("----------------------------------------------------------");
+        System.out.println();
+        System.out.println("Wat wilt u doen?");
+        System.out.println("1: optie toevoegen");
+        System.out.println("2: optie verwijderen");
+        System.out.println("0: terug");
+    }
+
 }
