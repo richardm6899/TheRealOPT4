@@ -83,7 +83,8 @@ public abstract class Gebruiker
         selecteerOpties(offerte,essentieleOpties, extraOpties, sc);
 
     }
-// verzamel gekozen opties uit optielijst
+//verzamel gekozen opties uit optielijst
+//zorgt ervoor dat opties gekozen kunnen worden en dat het gezien laat worden
     public static void selecteerOpties(Offerte offerte, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc){
 
         System.out.println("Selecteer jouw optie");
