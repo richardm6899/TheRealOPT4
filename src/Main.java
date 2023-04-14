@@ -8,7 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         //Logo voor welkom.
         Welkom.logoPage();
-
+//maak verschillende klanttypes aan
         ArrayList<KlantType> klantTypes = new ArrayList<KlantType>();
         klantTypes.add(new KlantType("Bedrijf", 90));
         klantTypes.add(new KlantType("Extra", 20));
@@ -18,6 +18,7 @@ public class Main {
 
         ArrayList<EssentieleOptie> essentieleOpties = new ArrayList<>();
         ArrayList<ExtraOptie> extraOpties = new ArrayList<>();
+// maak verschillende opties aan
 
         essentieleOpties.add(new EssentieleOptie("Motor", "Draait boot", 1999.99));
         essentieleOpties.add(new EssentieleOptie("energievoorzieningen", "Licht geven", 20));

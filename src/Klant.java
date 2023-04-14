@@ -16,7 +16,7 @@ public class Klant extends Gebruiker
         this.offerte = offerte;
         this.klantType = klantType;
     }
-    //deze constructor zit hier om het inloggen te testen. <Sayf>
+
     public Klant(String naam, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, String adres, String email, int telefoonnummer, KlantType klantType){
         super(naam, essentieleOpties, extraOpties);
         this.email = email;

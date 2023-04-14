@@ -84,7 +84,7 @@ public class Scheepsbouwer extends Gebruiker{
             System.out.println("onjuiste keuze");
         }
     }
-
+//print de optielijst zodat de scheepsbouwer een keuze kan maken
     public static void lijstOpties(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc) {
         System.out.println("Optie lijst:");
         System.out.println("essentiele opties:");

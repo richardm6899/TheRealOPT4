@@ -105,7 +105,7 @@ class Optie {
 
 
     }
-
+// scheepsbouwer moet opties kunnen verwijderen
     public static void optieVerwijderen(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc, Scheepsbouwer richard, ArrayList<KlantType> klantType){
         System.out.println("1: essentiele optie verwijderen");
         System.out.println("2: extra optie verwijderen");
@@ -151,7 +151,7 @@ class Optie {
             Optie.optieToevoegen(essentieleOpties, extraOpties, sc, richard, klantType);
         }
     }
-
+//zorgt ervoor dat opties gekozen kunnen worden en dat het gezien laat worden
     public static void selecteerOpties(Offerte offerte, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc){
         System.out.println("Selecteer jouw optie");
         int keuze = sc.nextInt();

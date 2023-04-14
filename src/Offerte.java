@@ -11,7 +11,7 @@ public class Offerte {
     public Offerte(KlantType klanttype) {
         this.klanttype = klanttype;
     }
-    //berekent totaal prijs.
+    //berekent totaal prijs. inclusief kortingspercentage
     public void berekenTotaalPrijs() {
         for (EssentieleOptie esOptie:gekozenEssentieleOpties) {
             totaalPrijs += esOptie.getKostenEssentieleOptie();

@@ -43,7 +43,7 @@ public abstract class Gebruiker
     public void setExtraOptie(ArrayList<ExtraOptie> extraOpties) {
         this.extraOpties = extraOpties;
     }
-
+//laat de optielijst zien
     public static void printOptieLijst(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties) {
         System.out.println("----------------------------------------------------------");
         System.out.println("De volgende essentiele opties zijn: ");
@@ -61,7 +61,7 @@ public abstract class Gebruiker
             index++;
         }
     }
-
+// klant moet gegevens invullen om zijn "account aan te maken"
     public static void gegevensInvullen(ArrayList<KlantType> klantTypes, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc) {
         //vraagt gegevens en slaat deze op.
         System.out.println("Vul je naam in:");
@@ -83,7 +83,7 @@ public abstract class Gebruiker
         selecteerOpties(offerte,essentieleOpties, extraOpties, sc);
 
     }
-
+// verzamel gekozen opties uit optielijst
     public static void selecteerOpties(Offerte offerte, ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc){
 
         System.out.println("Selecteer jouw optie");

@@ -26,7 +26,7 @@ public class KlantType extends MilieuKorting{
         }
 
     }
-
+//scheepsbouwer moet klanttypen met bijbehorende kortingspercentage kunnen toevoegen
     public static void klantTypeToevoegen(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc, Scheepsbouwer richard, ArrayList<KlantType> klantType){
         System.out.println("welke klanttype wilt u toevoegen?");
         System.out.println("naam klanttype: ");
@@ -49,7 +49,7 @@ public class KlantType extends MilieuKorting{
         System.out.println();
         Scheepsbouwer.scheepsBouwer(klantType, essentieleOpties, extraOpties, sc, richard);
     }
-
+// en verwijderen
     public void klantTypeVerwijderen(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc, Scheepsbouwer richard, ArrayList<KlantType> klantType){
         System.out.println("welke klanttype wilt u verwijderen?");
         int choice = sc.nextInt();
