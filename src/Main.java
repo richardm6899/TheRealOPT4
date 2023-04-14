@@ -6,7 +6,7 @@ public class Main {
 
 
         Scanner sc = new Scanner(System.in);
-        //ik heb de ascii art verplaatst.
+        //Logo voor welkom.
         Welkom.logoPage();
 
         ArrayList<KlantType> klantTypes = new ArrayList<KlantType>();
@@ -18,14 +18,13 @@ public class Main {
 
         ArrayList<EssentieleOptie> essentieleOpties = new ArrayList<>();
         ArrayList<ExtraOptie> extraOpties = new ArrayList<>();
-
         essentieleOpties.add(new EssentieleOptie("Motor", "Draait boot", 1999.99));
         essentieleOpties.add(new EssentieleOptie("energievoorzieningen", "Licht geven", 20));
         essentieleOpties.add(new EssentieleOptie("Scheepsromp", "Geeft structuur aan het schip", 20));
         essentieleOpties.add(new EssentieleOptie("Diesel", "Geeft energie", 20));
-        extraOpties.add(new ExtraOptie("sea-wiz", "Anti air defense systeem", 20));
+        extraOpties.add(new ExtraOptie("sea-wiz", "Anti air defense system", 20));
         extraOpties.add(new ExtraOptie("TurretKogels", "Kogels om te kunnen schieten", 20));
-        extraOpties.add(new ExtraOptie("Torpedos", "Schippen te kunnen schieten", 20));
+        extraOpties.add(new ExtraOptie("Torpedos", "Onderwater Raketten", 20));
 
 
         Welkom.welkomScreen(klantTypes, essentieleOpties, extraOpties, sc, richard);
@@ -76,7 +75,7 @@ public class Main {
                 }
             }
 
-        System.out.println("Heb je alles selecteerd?");
+        System.out.println("Heb je alles geselecteerd?");
         System.out.println("1: ja");
         System.out.println("2: nee");
 

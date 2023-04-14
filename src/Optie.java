@@ -17,7 +17,8 @@ class Optie {
         }
 
 
-    public static void lijstOpties(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc) {
+    // Methode om de lijst met opties uit te printen, essentieel en extra
+        public static void lijstOpties(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc) {
         System.out.println("Optie lijst:");
         System.out.println("essentiele opties:");
         for (EssentieleOptie essentieleOptie : essentieleOpties) {
@@ -34,7 +35,7 @@ class Optie {
         System.out.println("0: terug");
     }
 
-
+    // Methode zodat de scheepsbouwer opties kan toevoegen, deze moet de gegevens opvragen en kunnen overnemen die de maker geeft
     public static void optieToevoegen(ArrayList<EssentieleOptie> essentieleOpties, ArrayList<ExtraOptie> extraOpties, Scanner sc, Scheepsbouwer richard, ArrayList<KlantType> klantType)
     {
         System.out.println("1: essentiele optie toevoegen");

@@ -93,7 +93,7 @@ public abstract class Gebruiker
             System.out.println(extraOpties.get(keuze - 1 - essentieleOpties.size()).getExtraOptie());
             offerte.addGekozenExtraOpties( extraOpties.get(keuze - 1 - essentieleOpties.size()) );
         }
-        System.out.println("Heb je alles selecteerd?");
+        System.out.println("Heb je alles geselecteerd?");
         System.out.println("1: ja");
         System.out.println("2: nee");
 
