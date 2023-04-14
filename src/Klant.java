@@ -24,6 +24,14 @@ public class Klant extends Gebruiker
         this.telefoonnummer = telefoonnummer;
         this.klantType = klantType;
     }
+    public Klant(String naam, String email, String adres, int telefoonnummer){
+        super(naam);
+        this.email = email;
+        this.adres = adres;
+        this.telefoonnummer = telefoonnummer;
+
+
+    }
 
     public String getAdres() {
         return adres;
